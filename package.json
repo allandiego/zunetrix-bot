@@ -1,0 +1,54 @@
+{
+  "name": "zunetrix-bot",
+  "version": "1.0.0",
+  "description": "Bot for Telegram",
+  "license": "MIT",
+  "author": "allandiego",
+  "private": true,
+  "main": "./src/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allandiego/zunetrix-bot.git"
+  },
+  "homepage": "https://github.com/allandiego/zunetrix-bot.git#readme",
+  "bugs": {
+    "url": "https://github.com/allandiego/zunetrix-bot.git/issues"
+  },
+  "scripts": {
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "start": "node dist/server.js",
+    "test": "jest",
+    "check-updates": "yarn upgrade-interactive --latest"
+  },
+  "dependencies": {
+    "date-fns": "^2.16.1",
+    "dotenv": "^8.2.0",
+    "telegraf": "^3.38.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/jest": "^26.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-plugin-transform-typescript-metadata": "^0.3.1",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.4.4",
+    "ts-node-dev": "1.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.3"
+  }
+}
